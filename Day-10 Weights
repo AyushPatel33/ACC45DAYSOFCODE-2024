@@ -1,0 +1,11 @@
+def can_measure_weight(W, X, Y, Z):
+    if W in {X, Y, Z, X + Y, X + Z, Y + Z, X + Y + Z}:
+        return "YES"
+    else:
+        return "NO"
+
+T = int(input())
+
+for _ in range(T):
+    W, X, Y, Z = map(int, input().split())
+    print(can_measure_weight(W, X, Y, Z))
