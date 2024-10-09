@@ -1,0 +1,8 @@
+def min_flips(N, X):
+    return min(X, N - X)
+
+T = int(input())
+
+for _ in range(T):
+    N, X = map(int, input().split())
+    print(min_flips(N, X))
