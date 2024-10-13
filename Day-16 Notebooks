@@ -1,0 +1,15 @@
+def count_notebooks(T, test_cases):
+    results = []
+    for i in range(T):
+        N = test_cases[i]
+        notebooks = N * 10
+        results.append(notebooks)
+    return results
+
+T = int(input())
+test_cases = [int(input()) for _ in range(T)]
+
+results = count_notebooks(T, test_cases)
+
+for result in results:
+    print(result)
