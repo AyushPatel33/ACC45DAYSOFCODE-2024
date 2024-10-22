@@ -1,0 +1,9 @@
+T = int(input())
+
+for _ in range(T):
+    referees = list(map(int, input().split()))
+    
+    if all(r == 0 for r in referees):
+        print("IN")
+    else:
+        print("OUT")
