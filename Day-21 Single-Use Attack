@@ -1,0 +1,15 @@
+def min_attacks(H, X, Y):
+    normal_attacks_only = (H + X - 1) // X
+
+    if H <= Y:
+        special_then_normal = 1
+    else:
+        remaining_health = H - Y
+        special_then_normal = 1 + (remaining_health + X - 1) // X
+
+    return min(normal_attacks_only, special_then_normal)
+
+T = int(input())
+for _ in range(T):
+    H, X, Y = map(int, input().split())
+    print(min_attacks(H, X, Y))
