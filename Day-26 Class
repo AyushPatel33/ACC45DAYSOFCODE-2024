@@ -1,0 +1,24 @@
+# Define the Rectangle class
+class Rectangle:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+
+    # Method to calculate area
+    def area(self):
+        return self.length * self.breadth
+
+    # Method to calculate perimeter
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
+
+# Input
+length = int(input("Enter the length of the rectangle: "))
+breadth = int(input("Enter the breadth of the rectangle: "))
+
+# Create a Rectangle object
+rect = Rectangle(length, breadth)
+
+# Output the area and perimeter
+print(rect.area())
+print(rect.perimeter())
