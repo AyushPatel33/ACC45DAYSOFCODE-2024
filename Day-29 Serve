@@ -1,0 +1,15 @@
+def determine_serve(p, q):
+    total_points = p + q
+    if (total_points // 2) % 2 == 0:
+        return "Alice"
+    else:
+        return "Bob"
+
+t = int(input())
+results = []
+for _ in range(t):
+    p, q = map(int, input().split())
+    results.append(determine_serve(p, q))
+
+for result in results:
+    print(result)
