@@ -1,0 +1,17 @@
+def is_score_possible(A, B, C, D):
+    x = C - A
+    y = D - B
+    if x >= 0 and y >= 0:
+        return "POSSIBLE"
+    else:
+        return "IMPOSSIBLE"
+
+T = int(input())
+results = []
+for _ in range(T):
+    A, B = map(int, input().split())
+    C, D = map(int, input().split())
+    results.append(is_score_possible(A, B, C, D))
+
+for result in results:
+    print(result)
