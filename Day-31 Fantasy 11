@@ -1,0 +1,11 @@
+def captain_vice_captain_choices(N):
+    return N * (N - 1)
+
+T = int(input())
+results = []
+for _ in range(T):
+    N = int(input())
+    results.append(captain_vice_captain_choices(N))
+
+for result in results:
+    print(result)
