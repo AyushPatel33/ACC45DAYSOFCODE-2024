@@ -1,0 +1,32 @@
+# Read the number of rounds
+n = int(input())
+
+# Initialize cumulative scores and maximum lead variables
+cumulative_score_player1 = 0
+cumulative_score_player2 = 0
+max_lead = 0
+winner = 0
+
+# Process each round
+for _ in range(n):
+    # Read scores of Player 1 and Player 2 for the round
+    s, t = map(int, input().split())
+    
+    # Update cumulative scores
+    cumulative_score_player1 += s
+    cumulative_score_player2 += t
+    
+    # Calculate the current lead and determine the player with the lead
+    current_lead = abs(cumulative_score_player1 - cumulative_score_player2)
+    if cumulative_score_player1 > cumulative_score_player2:
+        current_winner = 1
+    else:
+        current_winner = 2
+    
+    # Update max lead and winner if the current lead is greater than max_lead
+    if current_lead > max_lead:
+        max_lead = current_lead
+        winner = current_winner
+
+# Output the winner and the maximum lead
+print(winner, max_lead)
