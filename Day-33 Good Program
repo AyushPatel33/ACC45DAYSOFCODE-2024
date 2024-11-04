@@ -1,0 +1,14 @@
+def is_program_good(N):
+    if N % 4 == 0:
+        return "Good"
+    else:
+        return "Not Good"
+
+T = int(input())
+results = []
+for _ in range(T):
+    N = int(input())
+    results.append(is_program_good(N))
+
+for result in results:
+    print(result)
