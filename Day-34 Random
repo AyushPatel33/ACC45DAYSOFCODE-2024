@@ -1,0 +1,13 @@
+T = int(input("Enter number of test cases: "))
+results = []
+
+for _ in range(T):
+    N = int(input("Enter number of bits: "))
+    
+    if N % 4 == 0:
+        results.append("Good")
+    else:
+        results.append("Not Good")
+
+for result in results:
+    print(result)
