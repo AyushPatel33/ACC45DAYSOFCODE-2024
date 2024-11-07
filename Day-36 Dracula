@@ -1,0 +1,11 @@
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    
+    full_weeks = N // 7
+    remaining_days = N % 7
+    
+    tuesdays = full_weeks + (1 if remaining_days >= 2 else 0)
+    
+    print(tuesdays)
