@@ -1,0 +1,14 @@
+T = int(input())
+
+for _ in range(T):
+    N, A, B = map(int, input().split())
+    
+    rounds = 0
+    teams = N
+    while teams > 1:
+        teams //= 2
+        rounds += 1
+
+    total_time = rounds * A + (rounds - 1) * B  # Rounds time + (rounds-1) breaks
+    
+    print(total_time)
