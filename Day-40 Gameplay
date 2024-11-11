@@ -1,0 +1,14 @@
+# Example input for testing
+X, Y = 50, 24
+
+# Calculate the time spent on the first Y minutes watched at 2x speed
+time_at_2x_speed = Y // 2
+
+# Calculate the time spent on the remaining part at normal speed
+time_at_normal_speed = X - Y
+
+# Calculate the total time spent watching the movie
+total_time = time_at_2x_speed + time_at_normal_speed
+
+# Output the result
+print(total_time)
