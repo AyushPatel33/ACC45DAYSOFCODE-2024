@@ -1,0 +1,14 @@
+# Function to determine pass or fail for each test case
+def pass_or_fail(N, X, P):
+    score = 4 * X - N
+    return "PASS" if score >= P else "FAIL"
+
+# Reading input
+T = int(input())
+results = []
+for _ in range(T):
+    N, X, P = map(int, input().split())
+    results.append(pass_or_fail(N, X, P))
+
+# Output results
+print("\n".join(results))
