@@ -1,0 +1,11 @@
+T = int(input())
+
+results = []
+for _ in range(T):
+    N = int(input())
+    
+    total_coins = 4 * (N // 5) + (N % 5)
+    results.append(total_coins)
+
+for result in results:
+    print(result)
